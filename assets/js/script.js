@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".review-slider", {
     loop: true,
     autoplay: true,
+    speed: 500,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

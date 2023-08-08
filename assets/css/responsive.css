@@ -1,0 +1,134 @@
+@media (min-width: 575px) {
+  .blog-card:hover::before {
+    width: 200%;
+    top: -50%;
+    right: -50%;
+    height: 200%;
+    opacity: 0.05;
+  }
+}
+
+@media (max-width:1170px) {
+  :root {
+    --h1: normal 600 38px/1.1 var(--first-font);
+    --h2: normal 600 36px/1.1 var(--first-font);
+    --h3: normal 600 28px/1.1 var(--first-font);
+    --h4: normal 600 24px/1.1 var(--first-font);
+    --common-text: normal 400 15px/1.5 var(--first-font);
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:991px) {
+  .pt {
+    padding-top: 50px
+  }
+
+  .pb {
+    padding-bottom: 50px
+  }
+
+  .logo-wrapper {
+    max-width: 90px;
+  }
+
+  .hero-section {
+    padding: 150px 0 80px;
+  }
+
+  .funding-card .img-wrapper {
+    max-width: 300px;
+  }
+}
+
+@media (max-width:768px) {
+  :root {
+    --h1: normal 600 32px/1.1 var(--first-font);
+    --h2: normal 600 32px/1.1 var(--first-font);
+    --h3: normal 600 24px/1.1 var(--first-font);
+    --h4: normal 600 22px/1.1 var(--first-font);
+    --h5: normal 600 18px/1.1 var(--first-font);
+    --h6: normal 600 16px/1.1 var(--first-font)
+  }
+
+  .funding-card {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 576px) {
+  :root {
+    --h1: normal 600 26px/1.1 var(--first-font);
+    --h2: normal 600 26px/1.1 var(--first-font);
+    --h3: normal 600 22px/1.1 var(--first-font);
+    --h4: normal 600 20px/1.1 var(--first-font);
+    --h5: normal 600 18px/1.1 var(--first-font);
+    --h6: normal 600 16px/1.1 var(--first-font)
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .accordion-header button {
+    font-size: 15px !important;
+  }
+
+  .accordion-body {
+    font-size: 14px !important;
+  }
+
+  .hero-section {
+    padding: 120px 0 50px;
+  }
+
+  .get-started-section ul {
+    padding: 20px 15px;
+  }
+
+  .blog-card::before {
+    z-index: 1;
+  }
+
+  .blog-card .blog-img-wrapper,
+  .funding-card .img-wrapper {
+    max-width: 100%;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    opacity: 0.7;
+  }
+
+  .reveiw-card {
+    padding: 0 0 30px;
+  }
+
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0;
+    right: auto;
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .site-header nav {
+    gap: 10px;
+  }
+
+  .blog-card::before {
+    font-size: 15px;
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+  }
+
+}

@@ -198,6 +198,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   color: #fff !important;
 }
 
+.reasons-for-funding-section::before,
+.faq-section:before,
 .user-journey::before,
 .hero-section::before {
   content: '';
@@ -245,6 +247,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   display: flex;
   gap: 10px;
   align-items: baseline;
+}
+
+.get-started-section ul li:last-child {
+  margin-bottom: 0;
 }
 
 .get-started-section ul li i {
@@ -325,12 +331,32 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   position: relative;
 }
 
+.review-slider {
+  max-width: 800px;
+  width: 100%;
+}
+
 .reveiw-card {
-  background-color: var(--off-white);
-  padding: 60px 40px;
+  position: relative;
+  padding: 0 40px 40px;
   border-radius: 10px;
   text-align: center;
-  border-bottom: 2px solid var(--theme-color);
+}
+
+.reveiw-card::before {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: 50%;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: var(--theme-color);
+}
+
+.reveiw-card p {
+  margin-bottom: 0;
 }
 
 .swiper {
@@ -366,8 +392,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  padding: 20px;
   margin-bottom: 30px;
+
 }
 
 .funding-card:last-child {
@@ -394,7 +420,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   opacity: 1;
 }
 
-
 /*///////////////////////// faq-container  ///////////*/
 .faq-container {
   max-width: 700px;
@@ -404,6 +429,19 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 
 .faq-container button:focus {
   box-shadow: inset 0 -1px 0 rgb(255 255 255 / 50%) !important;
+}
+
+.faq-section {
+  position: relative;
+  z-index: 1;
+}
+
+.faq-section:before {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  transform: rotate(165deg);
 }
 
 .accordion-item {
@@ -420,6 +458,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .accordion-body {
   background-color: var(--second-color);
   color: #fff;
+  line-height: 1.3;
 }
 
 .accordion-button::after {
@@ -430,18 +469,72 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   filter: brightness(55);
 }
 
+.accordion-header button {
+  font-size: 18px !important;
+}
+
+.accordion-body {
+  font-size: 15px !important;
+}
+
+/*///////////////////////// .reasons-for-funding-section  ///////////*/
+.reasons-for-funding-section {
+  position: relative;
+  z-index: 1;
+}
+
+.reasons-for-funding-section::before {
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: auto;
+}
 
 /*///////////////////////// blog  ///////////*/
 .blog-card {
+  position: relative;
   display: flex;
   gap: 20px;
   max-width: 900px;
   width: 100%;
   margin: 0 auto 40px;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgb(0 0 0 /12%);
+  border-radius: 10px;
+  padding: 20px 15px;
+  border: 1px solid rgb(255 0 0 / 30%);
+  overflow: hidden;
+}
+
+.blog-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -55px;
+  right: -55px;
+  background-image: linear-gradient(315deg, #2d3436 20%, #000000 74%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
 }
 
 .blog-card:last-child {
   margin-bottom: 0;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
 }
 
 .blog-card .blog-img-wrapper {
@@ -464,6 +557,11 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 
 .blog-content p {
   font-size: 16px !important;
+  flex: 1;
+}
+
+.blog-item-subtexts {
+  white-space: nowrap;
 }
 
 .blog-item-subtexts {
@@ -490,9 +588,16 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 .site-footer p {
   font-size: 15px !important;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .site-footer p a {
-  color: #188bf6;
+  color: var(--theme-color);
+}
 
+.site-footer p a:hover {
+  text-decoration: underline;
 }
