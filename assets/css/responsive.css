@@ -32,7 +32,7 @@
   }
 
   .logo-wrapper {
-    max-width: 90px;
+    max-width: 130px;
   }
 
   .hero-section {
@@ -134,6 +134,14 @@
     padding: 2px;
     width: 90px;
     height: 90px;
+  }
+
+  .site-header .logo-wrapper {
+    margin: auto;
+  }
+
+  .site-header .email {
+    display: none;
   }
 
 }

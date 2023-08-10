@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   window.addEventListener("scroll", onScroll);
 
-  var swiper = new Swiper(".review-slider", {
+  let swiper = new Swiper(".review-slider", {
     loop: true,
     autoplay: true,
     speed: 500,
@@ -22,4 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  // Get the header element
+  const header = document.querySelector("header");
+  const wrapper = document.querySelector(".wrapper");
+
+  var headerHeight = header.offsetHeight;
+  wrapper.style.marginTop = headerHeight + "px";
 });

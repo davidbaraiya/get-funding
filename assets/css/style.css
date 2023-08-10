@@ -138,6 +138,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   transition: all 0.4s ease-in-out;
   padding: 12px 25px;
   border: 1px solid transparent;
+  line-height: 1.1;
 }
 
 .btn:hover {
@@ -164,6 +165,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--second-color);
   color: var(--white);
   padding: 15px 0;
   z-index: 4;
@@ -172,6 +174,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+}
+
+.home-page .site-header {
+  background: transparent;
 }
 
 .site-header.scrolled {
@@ -194,7 +200,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 }
 
 .logo-wrapper {
-  max-width: 150px;
+  max-width: 180px;
   width: 100%;
 }
 
@@ -715,4 +721,40 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 
 .site-footer p a:hover {
   text-decoration: underline;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto 0;
+}
+
+.form-wrapper form {
+  background-color: #fff;
+  box-shadow: 0 5px 5px 1px rgb(0 0 0 /5%);
+  border-radius: 10px;
+  padding: 40px 20px;
+  border: 1px solid rgb(0 0 0 /20%);
+}
+
+.form-wrapper label {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: var(--theme-color);
+  font-weight: 600;
+}
+
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
+  text-transform: capitalize;
+}
+
+.form-control:hover,
+.form-control:focus {
+  border: 1px solid var(--theme-color);
+  box-shadow: none;
+}
+
+.progress-bar {
+  background-color: var(--theme-color);
 }
