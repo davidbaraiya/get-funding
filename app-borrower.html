@@ -34,6 +34,7 @@
   </header>
   <div class="wrapper">
     <section class="app-borrower-section pt pb">
+
       <div class="container">
         <div class="text-center">
           <h2 class="text-success">Success !</h2>
@@ -58,6 +59,10 @@
       </div>
     </section>
     <section class="form-section pb">
+      <span class="circle circle1"></span>
+      <span class="circle circle2"></span>
+      <span class="circle circle3"></span>
+      <span class="circle circle4"></span>
       <div class="container">
         <div class="note">
           <div class="d-flex gap-2 align-items-center justify-content-center">
@@ -68,37 +73,264 @@
         <div class="form-wrapper">
           <form action="">
             <div class="row">
-              <div class="col-sm-6 mb-3">
-                <label for="fname" class="form-label">first name</label>
+              <div class="col-12 mb-3">
+                <label for="fname" class="form-label">first name*</label>
                 <input type="text" class="form-control" id="fname" placeholder="first name">
               </div>
-              <div class="col-sm-6 mb-3">
-                <label for="lname" class="form-label">last name</label>
+              <div class="col-12 mb-3">
+                <label for="lname" class="form-label">last name*</label>
                 <input type="text" class="form-control" id="lname" placeholder="last name">
               </div>
-              <div class="col-sm-12 mb-3">
-                <label for="address" class="form-label">Address</label>
-                <textarea type="text" class="form-control" id="address" placeholder="address"></textarea>
-
+              <div class="col-12 mb-3">
+                <label for="address" class="form-label">Address*</label>
+                <textarea type="text" class="form-control" id="address" placeholder="address">
+                </textarea>
               </div>
-              <div class="col-sm-6 mb-3">
-                <label for="phone" class="form-label">phone *</label>
+              <div class="col-12 mb-3">
+                <label for="phone" class="form-label">phone*</label>
                 <input type="number" class="form-control" id="phone" placeholder="phone">
               </div>
-              <div class="col-sm-6 mb-3">
-                <label for="city" class="form-label">City</label>
+              <div class="col-12 mb-3">
+                <label for="city" class="form-label">City*</label>
                 <input type="text" class="form-control" id="city" placeholder="city">
               </div>
-              <div class="col-sm-6 mb-3">
-                <label for="state" class="form-label">State</label>
+              <div class="col-12 mb-3">
+                <label for="state" class="form-label">State*</label>
                 <input type="text" class="form-control" id="state" placeholder="State">
               </div>
-              <div class="col-sm-6 mb-3">
-                <label for="postal-code" class="form-label">Postal code</label>
+              <div class="col-12 mb-3">
+                <label for="postal-code" class="form-label">Postal code*</label>
                 <input type="text" class="form-control" id="postal-code" placeholder="postal code">
               </div>
-              <div class="col-sm-12 mt-4 text-end">
-                <button type="submit" class="btn">Submit</button>
+              <div class="col-12 mb-3">
+                <label for="funding-needed" class="form-label">
+                  Type of Funding Needed (If it's not to purchase,
+                  disregard the purchase section on this form) *
+                </label>
+                <div class="radio-grp">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="findingRadio" id="findingRadio1">
+                    <label class="form-check-label" for="findingRadio1">
+                      Purchase
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="findingRadio" id="findingRadio2">
+                    <label class="form-check-label" for="findingRadio2">
+                      Refinance
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="findingRadio" id="findingRadio3">
+                    <label class="form-check-label" for="findingRadio3">
+                      Business
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="money" class="form-label">
+                  How Much Money Are You Needing? *
+                </label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" id="money">
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="needFunding" class="form-label">
+                  What do you need the funding for? *
+                </label>
+                <textarea type="text" class="form-control" id="needFunding" placeholder="needFunding">
+                </textarea>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="funding-needed" class="form-label">
+                  How Long Will You need This Funding?
+                </label>
+                <div class="radio-grp">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="needFunding" id="needFunding1">
+                    <label class="form-check-label" for="needFunding1">
+                      3 months
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="needFunding" id="needFunding2">
+                    <label class="form-check-label" for="needFunding2">
+                      6 months
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="needFunding" id="needFunding3">
+                    <label class="form-check-label" for="needFunding3">
+                      12 Months or More
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="funding-needed" class="form-label">
+                  How Do You Plan to Repay this Loan?
+                </label>
+                <div class="radio-grp">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="repayLaon" id="repayLaon1">
+                    <label class="form-check-label" for="repayLaon1">
+                      Refinance
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="repayLaon" id="repayLaon2">
+                    <label class="form-check-label" for="repayLaon2">
+                      Sale
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="" class="form-label">
+                  Do You Have Collateral? *
+                </label>
+                <select class="form-select" aria-label="Do You Have Collateral?">
+                  <option selected disabled>Do You Have Collateral ?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="maybe">Maybe</option>
+                </select>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="collateral" class="form-label">
+                  Collateral Property Address:
+                </label>
+                <textarea type="text" class="form-control" id="collateral" placeholder="Collateral Property Address:">
+                </textarea>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="collateral" class="form-label">
+                  Pictures of your Collateral
+                </label>
+                <textarea type="text" class="form-control" id="collateral" placeholder="Collateral Property Address:">
+                </textarea>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="collateral" class="form-label">
+                  Pictures of your Collateral
+                </label>
+                <div>
+                  <label class="input-file">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    <input type="file" class="fileInput" multiple>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="payForProperty" class="form-label">
+                  How much did you pay for the property?
+                </label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" id="payForProperty"
+                    placeholder="How much did you pay for the property?">
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="year" class="form-label">What year did you buy the property?</label>
+                <input type="text" class="form-control" id="year" placeholder="What year did you buy the property?">
+              </div>
+              <div class="col-12 mb-3">
+                <label for="" class="form-label">
+                  Are You Free and Clear on the Mortgage?
+                </label>
+                <select class="form-select" aria-label="Are You Free and Clear on the Mortgage">
+                  <option selected disabled>Are You Free and Clear on the Mortgage?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="Mortgage" class="form-label">If Not, What is Your Approximate Mortgage Balance?</label>
+                <input type="text" class="form-control" id="Mortgage"
+                  placeholder="If Not, What is Your Approximate Mortgage Balance?">
+              </div>
+              <div class="col-12 mb-3">
+                <label for="PropertyIsWorth" class="form-label">How Much Do You Think the Property is Worth Today?
+                </label>
+                <input type="text" class="form-control" id="PropertyIsWorth"
+                  placeholder="How Much Do You Think the Property is Worth Today?">
+              </div>
+              <div class="col-12 mb-3">
+                <label for="estateTax" class="form-label">
+                  How much do you owe on your real estate taxes? *
+                </label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" id="estateTax"
+                    placeholder="How much do you owe on your real estate taxes?">
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="collateral2" class="form-label">
+                  Tell Us Anything Else We Should Know About Your Collateral
+                </label>
+                <textarea type="text" class="form-control" id="collateral2" placeholder="">
+                </textarea>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="PropertyAddress" class="form-label">
+                  Purchase Property Address (Disregard if you're not purchasing)
+                </label>
+                <textarea type="text" class="form-control" id="PropertyAddress" placeholder="Purchase Property Address">
+                </textarea>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="money2" class="form-label">How much of YOUR own money can you put down?</label>
+                <input type="text" class="form-control" id="money2"
+                  placeholder="How much of YOUR own money can you put down?">
+              </div>
+              <div class="col-12 mb-3">
+                <label for="rehab" class="form-label">
+                  How much money is needed for REHAB?
+                </label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" id="rehab" placeholder="How much money is needed for REHAB?">
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="offer" class="form-label">
+                  Purchase Property OFFER Amount
+                </label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" id="offer" placeholder="Purchase Property OFFER Amount">
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="" class="form-label">
+                  How Did You Hear About Us? *
+                </label>
+                <select class="form-select" aria-label="How Did You Hear About Us? ">
+                  <option selected disabled>How Did You Hear About Us?</option>
+                  <option value="">Facebook</option>
+                  <option value="">Craigslist</option>
+                  <option value="">Google</option>
+                  <option value="">Twitter</option>
+                  <option value="">TikTok</option>
+                  <option value="">Instagram</option>
+                  <option value="">Referral</option>
+                </select>
+              </div>
+              <div class="col-12 mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    I confirm that I want to receive content from this company using any contact information I provide.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 mt-4 text-end">
+                <button type="submit" class="btn w-100">Submit My Pre-Application</button>
               </div>
             </div>
           </form>
