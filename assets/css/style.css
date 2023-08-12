@@ -225,6 +225,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   color: #fff !important;
 }
 
+.form-section::before,
+.form-section::after,
 .reasons-for-funding-section::before,
 .faq-section:before,
 .user-journey::before,
@@ -496,6 +498,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   z-index: 1;
 }
 
+.form-section::before,
 .faq-section:before {
   top: 0;
   left: 0;
@@ -727,14 +730,20 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   text-decoration: underline;
 }
 
+.form-section {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
 .form-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   margin: 50px auto 0;
 }
 
 .form-wrapper form {
-  background-color: #ffffff70;
+  background-color: #ffffff;
   box-shadow: 0 4px 20px rgb(0 0 0 /10%);
   border-radius: 10px;
   padding: 40px 20px;
@@ -798,7 +807,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   max-width: 100%;
   cursor: pointer;
   width: 100%;
-  padding: 20px;
+  padding: 14px 20px;
   border: 1px solid #ced4da;
   display: flex;
   justify-content: center;
